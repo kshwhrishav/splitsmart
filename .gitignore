@@ -1,0 +1,10 @@
+# Global
+.DS_Store
+
+# Node (for frontend later)
+node_modules/
+.next/
+dist/
+
+# Env
+.env
