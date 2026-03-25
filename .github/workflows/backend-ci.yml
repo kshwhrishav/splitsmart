@@ -35,4 +35,9 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: .
+          DATABASE_URL: postgresql://test:test@localhost:5432/testdb
+          ALEMBIC_DATABASE_URL: postgresql://test:test@localhost:5432/testdb
+          AUTH0_DOMAIN: test-domain
+          AUTH0_AUDIENCE: test-audience
+          AUTH0_ISSUER: https://test-issuer/
         run: pytest
