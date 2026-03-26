@@ -6,3 +6,4 @@ alembic
 python-jose
 pydantic-settings
 python-dotenv
+requests
