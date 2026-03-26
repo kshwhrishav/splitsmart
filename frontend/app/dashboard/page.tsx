@@ -1,6 +1,6 @@
 import { auth0 } from "@/lib/auth0";
 import { redirect } from "next/navigation";
-import MeCard from "./MeCard";
+import MeCard from "./UserCard";
 
 export default async function DashboardPage() {
   const session = await auth0.getSession();
