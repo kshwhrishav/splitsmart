@@ -1,8 +1,9 @@
 import uuid
 from sqlalchemy import String
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.core.db import Base
+
 
 class User(Base):
     __tablename__ = "users"
@@ -15,3 +16,5 @@ class User(Base):
     auth0_id: Mapped[str] = mapped_column(String, unique=True, index=True)
     email: Mapped[str | None] = mapped_column(String, nullable=True, index=True)
     name: Mapped[str | None] = mapped_column(String, nullable=True)
+
+    group_memberships = relationship("GroupMember", back_populates="user")
